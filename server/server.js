@@ -21,6 +21,10 @@ app.use('/api/companies', require('./routes/companies'))
 app.use('/api/tasks', require('./routes/tasks'))
 app.use('/api/dashboard', require('./routes/dashboard'))
 
+app.get('/', (req, res) =>
+  res.json({ message: 'Mini CRM API', health: '/api/health' }),
+)
+
 app.use((req, res) => res.status(404).json({ message: 'Route not found' }))
 
 // Central error handler
