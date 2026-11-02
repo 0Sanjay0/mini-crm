@@ -3,7 +3,12 @@ import { Alert, Snackbar } from '@mui/material';
 import { getErrorMessage } from '../api/axios';
 
 const NotifyContext = createContext(null);
-export const useNotify = () => useContext(NotifyContext);
+const fallback = {
+  success: () => {},
+  error: (e) => console.warn('NotifyProvider missing in App.jsx:', e?.message),
+};
+// Never returns null, so a missing provider can't break onSuccess/onError handlers
+export const useNotify = () => useContext(NotifyContext) ?? fallback;
 
 // Shows a Snackbar whenever a query fails
 export function useQueryError(error) {
