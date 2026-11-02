@@ -2,8 +2,8 @@
 
 A role-based CRM for managing leads, companies and tasks, built with the MERN stack.
 
-**Live app:** `<NETLIFY_URL>`
-**API:** `<RENDER_URL>/api` (health check: `<RENDER_URL>/api/health`)
+**Live app:** `[<NETLIFY_URL>](https://jade-froyo-27c632.netlify.app)`
+**API:** `[<RENDER_URL>/api](https://mini-crm-fxw0.onrender.com/api)` (health check: `<RENDER_URL>/api/health`)
 
 ## Stack
 - **Client:** React (Vite), React Router, MUI, TanStack Query, Axios
