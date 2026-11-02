@@ -12,7 +12,7 @@ const allowed = (process.env.CLIENT_URL || '')
 app.use(cors({ origin: allowed.length ? allowed : true }))
 app.use(express.json())
 
-app.get('/api/health', (req, res) => res.json({ ok: true }))
+app.get('/api/health', (req, res) => res.json({ status: 'ok' }))
 
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/users', require('./routes/users'))
