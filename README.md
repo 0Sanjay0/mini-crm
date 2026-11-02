@@ -27,7 +27,7 @@ A role-based CRM for managing leads, companies and tasks, built with the MERN st
 
 ## Local Setup
 ```bash
-git clone <REPO_URL> && cd <REPO>
+git clone https://github.com/0Sanjay0/mini-crm && cd mini-crm
 
 # server
 cd server && npm install
